@@ -1,16 +1,17 @@
-﻿using PersonnelManagement.Domain.Common;
+﻿using PersonnelManagement.Application.DTOs.Common;
+using PersonnelManagement.Application.DTOs.LeaveType;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PersonnelManagement.Domain
+namespace PersonnelManagement.Application.DTOs.LeaveRequest
 {
-    public class LeaveRequest : BaseDomainEntity
+    public class LeaveRequestDto : BaseDto
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public LeaveType LeaveType { get; set; }
-        public int LeaveTypeId {  get; set; }
+        public LeaveTypeDto LeaveType { get; set; }
+        public int LeaveTypeId { get; set; }
         public DateTime DateRequested { get; set; }
         public string RequestComments { get; set; }
         public DateTime? DateActioned { get; set; }
